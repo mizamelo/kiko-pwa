@@ -4,13 +4,15 @@ import './styles.scss';
 
 // import { Container } from './styles';
 
-export default function Login() {
+export default function Register() {
   return (
     <div className="container">
-      <div className="login-position">
+      <div className="register-position">
         <form>
-          <Input type={"text"} name={"name"} title={"E-mail"}/>
-          <Input type={"password"} name={"name"} title={"Password"}/>
+          <Input type={"text"} name={"name"} title={"Nome"}/>
+          <Input type={"email"} name={"email"} title={"E-mail"}/>
+          <Input type={"password"} name={"password"} title={"Senha"}/>
+          <Input type={"password"} name={"password"} title={"Repetir Senha"}/>
           <button className="btn-default" type="submit">Solicitar</button>
         </form>
         <div className="complementar-text-container">
