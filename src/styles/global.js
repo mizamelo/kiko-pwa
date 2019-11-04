@@ -37,6 +37,7 @@ export default createGlobalStyle`
   .btn-default {
     width: 292px;
     margin: 0 auto;
+    position: relative;
     height: 47px;
     border-radius: 10px;
     border: none;
@@ -48,9 +49,16 @@ export default createGlobalStyle`
     font-style: normal;
     color: #2E5077;
 
+
     &:hover {
       box-shadow: 0px 4px 13px rgba(0, 0, 0 0.45);
       background: #FADC8C;
     }
+  }
+
+  .default-link { 
+    color: #F6C543;
+    text-decoration: none;
+    cursor: pointer;
   }
 `;
