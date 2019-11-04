@@ -42,7 +42,7 @@ export default createGlobalStyle`
     border-radius: 10px;
     border: none;
     background: #F6C543;
-    box-shadow: 0px 4px 13px rgba(0, 0, 0 0.25);
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
     font-size:15px;
     font-weight: 600;
     font-family: Poppins, Sans Serif;

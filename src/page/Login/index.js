@@ -9,12 +9,12 @@ export default function Login() {
     <div className="container">
       <div className="login-position">
         <form>
-          <Input type={"text"} name={"name"} title={"E-mail"}/>
-          <Input type={"password"} name={"name"} title={"Password"}/>
-          <button className="btn-default" type="submit">Solicitar</button>
+          <Input type={"text"} name={"email"} title={"E-mail"}/>
+          <Input type={"password"} name={"password"} title={"Password"}/>
+          <button className="btn-default" type="submit">Entrar</button>
         </form>
         <div className="complementar-text-container">
-          <p>Já sou cadastrado? <span className="default-link">Login</span></p> 
+          <p>JEsqueceu a senha? <span className="default-link">Recuperar</span></p> 
         </div>
       </div>
     </div>
