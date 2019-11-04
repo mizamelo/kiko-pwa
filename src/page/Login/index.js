@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Input from '../../components/components/InputComponent';
 import './styles.scss';
 
@@ -14,7 +16,9 @@ export default function Login() {
           <button className="btn-default" type="submit">Solicitar</button>
         </form>
         <div className="complementar-text-container">
-          <p>Já sou cadastrado? <span className="default-link">Login</span></p> 
+          <p>Ainda não é cadastrado?{' '}
+            <Link to="/" className="default-link">Resgistrar-se</Link>
+          </p> 
         </div>
       </div>
     </div>
