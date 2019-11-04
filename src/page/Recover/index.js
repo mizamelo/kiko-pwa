@@ -6,18 +6,17 @@ import './styles.scss';
 
 // import { Container } from './styles';
 
-export default function Login() {
+export default function Recover() {
   return (
     <div className="container">
       <div className="login-position">
         <form>
-          <Input type={"text"} name={"email"} title={"E-mail"}/>
-          <Input type={"password"} name={"password"} title={"Password"}/>
-          <button className="btn-default" type="submit">Entrar</button>
+           <Input type={"email"} name={"email"} title={"E-mail"}/>
+          <button className="btn-default" type="submit">Recuperar Senha</button>
         </form>
         <div className="complementar-text-container">
-          <p>Ainda não é cadastrado?{' '}
-            <Link to="/register" className="default-link">Resgistrar-se</Link>
+          <p>Já sou cadastrado? {' '}
+            <Link to="/login" className="default-link">Login</Link>
           </p> 
         </div>
       </div>
