@@ -1,0 +1,151 @@
+.home {
+  padding: 35px 0px;
+
+  button {
+    text-align: left;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .taxa {
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 55px;
+      text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    }
+  } // taxa
+
+  .notice {
+    background: rgba(242, 242, 242, 0.2);
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    padding: 12px;
+    margin-top: 20px;
+
+    p {
+      font-size: 14px;
+
+      &::before {
+        content: ' ';
+        background: #F6C543;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  } // notice
+
+  .last {
+    margin-top: 25px;
+
+    span.nothing {
+      font-size: 12px;
+      font-weight: 100;
+      letter-spacing: .9px;
+      color: #cccccc85;
+    }
+
+    > p {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: .9px;
+    }
+
+    ul {
+
+      li {
+        list-style: none;
+        margin-right: 22px;
+        padding: 10px;
+        border-radius: 5px;
+        min-width: 138px;
+        height: 82px;
+
+        h5 {
+          font-style: normal;
+          font-weight: 900;
+          font-size: 14px;
+          color: #2E5077;
+        }
+
+        > p {
+          font-weight: 100;
+          font-size: 12px;
+          color: #2E5077;
+        }
+
+        span {
+          font-weight: 600;
+          font-size: 12px;
+          color: rgba(115, 6, 208, 0.8);
+        }
+      }
+    }
+  } // last
+
+  .courses {
+    margin-top: 25px;
+    height: 343px;
+
+    > p {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: .9px;
+      border-bottom: 2px solid rgba(253, 253, 255, 0.3);
+      line-height: 40px;
+    }
+
+    ul li {
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      margin-right: 25px;
+      list-style: none;
+      padding: 10px;
+      min-width: 230px;
+      height: 230px;
+      position: relative;
+
+      h5 {
+        font-size: 18px;
+        margin-top: 25px;
+      }
+
+      p {
+        font-size: 13px;
+        font-weight: lighter;
+        color: #2d5077;
+        margin-top: 14px;
+      }
+
+      span {
+        position: absolute;
+        bottom: 15px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+
+        img {
+          height: 30px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+
+}

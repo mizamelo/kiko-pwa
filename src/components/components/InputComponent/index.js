@@ -6,7 +6,6 @@ export default function Input (attr) {
         <div className="input-container">
             <label className="input-title">{attr.title}</label>
             <input className="input-element" id={attr.name} name={attr.name} type={attr.type}></input>
-            
         </div>
     );
 };

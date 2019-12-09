@@ -14,3 +14,8 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+.error {
+    border: 1px solid red;
+    z-index: -10;
+}

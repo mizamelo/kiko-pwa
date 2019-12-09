@@ -6,6 +6,9 @@ import Initial from '../page/Initial';
 import Login from '../page/Login';
 import Register from '../page/Register';
 import Recover from '../page/Recover';
+import Home from '../page/Home';
+import Courses from '../page/Courses';
+import Details from '../page/Details';
 
 export default function Router() {
   return (
@@ -15,6 +18,9 @@ export default function Router() {
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/recover" component={Recover} />
+        <Route path="/home" component={Home} />
+        <Route path="/courses" component={Courses} />
+        <Route path="/:id/course" component={Details} />
       </Switch>
     </BrowserRouter>
   );

@@ -1,20 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import api from '../../services/api';
 import Input from '../../components/components/InputComponent';
 import './styles.scss';
 
-// import { Container } from './styles';
 
-export default function Login() {
+export default function Login(props) {
+
+  async function doLogin(event) {
+    event.preventDefault();
+    const { email: { value: email }, password: { value: password } } = event.target;
+
+    const response = await api.post('sessions', { email, password });
+    localStorage.setItem('@kiko-token', response.data.token);
+    props.history.push('home');
+  }
+
   return (
     <div className="container">
       <div className="login-position">
-        <form>
-          <Input type={"text"} name={"email"} title={"E-mail"}/>
-          <Input type={"password"} name={"password"} title={"Password"}/>
+        <form onSubmit={doLogin} method="POST">
+          <Input type="email" required name="email" onChange={doLogin} title="E-mail"/>
+          <Input type="password" required name="password" title="Password" />
           <button className="btn-default" type="submit">Entrar</button>
         </form>
+
         <div className="complementar-text-container">
           <p>Ainda não é cadastrado?{' '}
             <Link to="/register" className="default-link">Resgistrar-se</Link>

@@ -1,0 +1,56 @@
+div.details {
+  div.header {
+    height: 130px;
+    position: relative;
+
+    a {
+      position: absolute;
+      top: 7px;
+      left: 7px;
+
+      img {
+        height: 30px;
+      }
+    }
+
+   p { 
+      position: absolute;
+      bottom: -14px;
+      left: 18px;
+      background: #F04583;
+      padding: 3px 62px;
+      border-radius: 5px;
+  
+    }
+  }
+
+  .body {
+    margin-top: 25px;
+
+    > p {
+      font-weight: 400;
+      margin-top: 40px;
+    }
+
+    p.body_p {
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 200;
+      color: #e1e1e1;
+      text-align: justify;
+    }
+
+    button {
+      width: 100%;
+      background: #F6C543;
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      border: 0;
+      padding: 11px;
+      font-weight: 600;
+      font-size: 15px;
+      margin-top: 25px;
+    }
+
+  }
+}

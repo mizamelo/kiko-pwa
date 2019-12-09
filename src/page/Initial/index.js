@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GoogleLogin from 'react-google-login';
 
+import { GoogleConf } from '../../services/google';  
 import './styles.scss';
-
-// import { Container } from './styles';
 
 export default function Initial(props) {
 
   function redirect() {
     props.history.push('/login');
   }
+
+  function handleSubmit(response) {
+    //
+  };
 
   return (
     <div className="container">
@@ -18,7 +22,15 @@ export default function Initial(props) {
         <div className="social-container">
           <p>Facebook</p>
           <span></span>
-          <p className="gl">Google</p>
+          {/* <p className="gl">Google</p> */}
+          <GoogleLogin
+            clientId={GoogleConf.clientId}
+            buttonText="Google"
+            onSuccess={handleSubmit}
+            onFailure={handleSubmit}
+            cookiePolicy={GoogleConf.cookiePolicy}
+            className="gl"
+          />
         </div>
         <div className="complementar-text-container">
           <p>Já tem uma conta? {' '}
