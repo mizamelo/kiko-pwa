@@ -12,7 +12,7 @@ export default function Menu() {
     <div className="menu-container">
       <ul>
         <li>
-          <Link to="/home">
+          <Link to="/">
             <img height="30" src={Home} alt="Home"/>
           </Link>
         </li>
@@ -22,7 +22,7 @@ export default function Menu() {
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/profile">
             <img height="30" src={Profile} alt="Profile"/>
           </Link>
         </li>

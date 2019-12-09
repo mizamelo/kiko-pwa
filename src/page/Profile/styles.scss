@@ -1,0 +1,32 @@
+div.profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  img {
+    height: 80px;
+  }
+  p:nth-of-type(1) {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 18px;
+  }
+
+  p:nth-of-type(2) {
+    font-size: 14px;
+  }
+
+  button {
+    width: 50%;
+    background: #F6C543;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 0;
+    padding: 11px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 25px;
+  }
+}

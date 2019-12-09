@@ -14,7 +14,8 @@ export default function Login(props) {
 
     const response = await api.post('sessions', { email, password });
     localStorage.setItem('@kiko-token', response.data.token);
-    props.history.push('home');
+    localStorage.setItem('@kiko-id', response.data.id);
+    props.history.push('/');
   }
 
   return (

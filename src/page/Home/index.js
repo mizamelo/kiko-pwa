@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import ContentLoader from 'react-content-loader';
@@ -91,7 +92,7 @@ function Home(props) {
           </div>
 
           <div className="notice">
-            <p>Noticia de alguma coisa de tesouro</p>
+            <marquee>Queda na taxa de juros diminui interesse por títulos de dívidas</marquee>
           </div>
 
           <div className="last">
