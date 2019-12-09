@@ -2,7 +2,8 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3333'
+  // baseURL: 'http://localhost:3333'
+  baseURL: 'https://backend-kiko-app.herokuapp.com'
 });
 
 api.interceptors.request.use(function (config) {

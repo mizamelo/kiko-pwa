@@ -24,6 +24,7 @@ export default function Register(props) {
 
     const response = await api.post('sessions/register', { email, password, name });
     localStorage.setItem('@kiko-token', response.data.token);
+    localStorage.setItem('@kiko-id', response.data.id);
     props.history.push('/');
   }
 
