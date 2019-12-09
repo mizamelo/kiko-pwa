@@ -53,13 +53,6 @@
   .last {
     margin-top: 25px;
 
-    span.nothing {
-      font-size: 12px;
-      font-weight: 100;
-      letter-spacing: .9px;
-      color: #cccccc85;
-    }
-
     > p {
       font-size: 16px;
       font-weight: bold;
@@ -75,6 +68,7 @@
         border-radius: 5px;
         min-width: 138px;
         height: 82px;
+        background-size: cover !important;
 
         h5 {
           font-style: normal;
@@ -122,14 +116,17 @@
 
       h5 {
         font-size: 18px;
-        margin-top: 25px;
+        margin-top: 28px;
+        color: #fff !important;
+        text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
       }
 
       p {
         font-size: 13px;
         font-weight: lighter;
-        color: #2d5077;
-        margin-top: 14px;
+        color: #fff !important;
+        margin-top: 16px;
+        text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
       }
 
       span {

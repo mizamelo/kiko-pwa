@@ -34,6 +34,13 @@ export default createGlobalStyle`
     margin: 0 auto; 
   }
 
+  span.nothing {
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: .9px;
+    color: #cccccc85;
+  }
+
   .btn-default {
     width: 292px;
     margin: 0 auto;
