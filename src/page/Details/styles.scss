@@ -13,14 +13,15 @@ div.details {
       }
     }
 
-   p { 
+   div.title { 
       position: absolute;
       bottom: -14px;
-      left: 18px;
+      left: 21px;
       background: #F04583;
       padding: 3px 62px;
       border-radius: 5px;
-  
+      min-height: 30px;
+      min-width: 174px;
     }
   }
 

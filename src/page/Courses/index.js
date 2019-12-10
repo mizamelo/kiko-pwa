@@ -6,14 +6,23 @@ import Menu from '../../components/Menu';
 import './styles.scss';
 
 export default function Courses(props) {
-  const [taxa, setTaxa] = useState([]);
+  // const [taxa, setTaxa] = useState([]);
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getTax() {
       // const { data: { data } } = await api.get('/taxas');
-      const { data: { data: courses } } = await api.get('/courses');
+      let courses;
+
+      if (!localStorage.getItem('@kiko-courses')) {
+        const { data: { data } } = await api.get('/courses');
+        courses = data;
+        localStorage.setItem('@kiko-courses', JSON.stringify(courses));
+      } else {
+        const local = localStorage.getItem('@kiko-courses');
+        courses = JSON.parse(local);
+      }
 
       // setTaxa(data.results);
       setCourses(courses);
@@ -59,8 +68,8 @@ export default function Courses(props) {
             height={70}
             width={600}
             speed={1}
-            primaryColor="#f9f7fa"
-            secondaryColor="#dad8db"
+            primaryColor="#425f80"
+            secondaryColor="#022045"
           >
             <rect x="0" y="40" rx="1" ry="1" width="250" height="10" />
           </ContentLoader>
@@ -68,8 +77,8 @@ export default function Courses(props) {
             height={80}
             width={400}
             speed={1}
-            primaryColor="#f9f7fa"
-            secondaryColor="#dad8db"
+            primaryColor="#425f80"
+            secondaryColor="#022045"
           >
             <rect x="0" y="0" rx="5" ry="5" width="70" height="70" />
           </ContentLoader>
@@ -78,8 +87,8 @@ export default function Courses(props) {
               height={160}
               width={400}
               speed={1}
-              primaryColor="#f9f7fa"
-              secondaryColor="#dad8db"
+              primaryColor="#425f80"
+              secondaryColor="#022045"
             >
               <rect x="-15" y="1" rx="0" ry="0" width="400" height="135" /> 
               <rect x="290" y="75" rx="0" ry="0" width="0" height="0" /> 
@@ -89,8 +98,8 @@ export default function Courses(props) {
               height={160}
               width={400}
               speed={1}
-              primaryColor="#f9f7fa"
-              secondaryColor="#dad8db"
+              primaryColor="#425f80"
+              secondaryColor="#022045"
             >
               <rect x="-15" y="1" rx="0" ry="0" width="400" height="135" /> 
               <rect x="290" y="75" rx="0" ry="0" width="0" height="0" /> 
@@ -100,8 +109,8 @@ export default function Courses(props) {
               height={160}
               width={400}
               speed={1}
-              primaryColor="#f9f7fa"
-              secondaryColor="#dad8db"
+              primaryColor="#425f80"
+              secondaryColor="#022045"
             >
               <rect x="-15" y="1" rx="0" ry="0" width="400" height="135" /> 
               <rect x="290" y="75" rx="0" ry="0" width="0" height="0" /> 
@@ -117,8 +126,8 @@ export default function Courses(props) {
           {!!courses.length ? (
             <ul className="list-courses">
               {courses.map((course, i) => (
-                <li style={{ background: (i%2 ? `linear-gradient(#5da1f0e8, #5da1f0de), url(${course.image}) cover` : `linear-gradient(#f6c543f2, #f6c543e3), url(${course.image})`) }}>
-                  <button style={{ background: 'transparent', height: '100%', width: '90%' }} key={course.id} onClick={() => handleCourse(course, (i%2 ? '#5DA1F0' : '#F6C543'))}>
+                <li key={course.id} style={{ background: (i%2 ? `linear-gradient(#5da1f0e8, #5da1f0de), url(${course.image}) cover` : `linear-gradient(#f6c543f2, #f6c543e3), url(${course.image})`) }}>
+                  <button style={{ background: 'transparent', height: '100%', width: '90%' }} onClick={() => handleCourse(course, (i%2 ? '#5DA1F0' : '#F6C543'))}>
                   <h5>{course.title}</h5>
                   <p>{course.description}</p>
                   </button>

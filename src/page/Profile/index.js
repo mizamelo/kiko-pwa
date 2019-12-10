@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ContentLoader from 'react-content-loader';
 
 import api from '../../services/api';
 import profile from '../../assets/profile-i.svg';
@@ -7,13 +8,24 @@ import Menu from '../../components/Menu';
 
 export default function Profile(props) {
   const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getUser() {
       const id = localStorage.getItem('@kiko-id');
-      const { data: { user } } = await api.post('/sessions/me', { id });
+      let profile;
 
-      setUser(user);
+      if (!localStorage.getItem('@kiko-profile')) {
+        const { data: { user } } = await api.post('/sessions/me', { id });
+        profile = user;
+        localStorage.setItem('@kiko-profile', JSON.stringify(profile));
+      } else {
+        const local = localStorage.getItem('@kiko-profile');
+        profile = JSON.parse(local);
+      }
+
+      setUser(profile);
+      setLoading(false);
     }
 
     getUser()
@@ -29,8 +41,23 @@ export default function Profile(props) {
       <div className="profile">
         {console.log(!!user.email)}
         <img src={profile} alt="Profile"/>
-        <p>{!!user.name && user.name}</p>
-        <p>{!!user.email && user.email}</p>
+        {!loading ? (
+          <>
+            <p>{!!user.name && user.name}</p>
+            <p>{!!user.email && user.email}</p>
+          </>
+        ) : (
+          <ContentLoader
+            height={70}
+            width={600}
+            speed={1}
+            primaryColor="#425f80"
+            secondaryColor="#022045"
+          >
+            <rect x="30%" y="20" rx="1" ry="1" width="250" height="10" />
+            <rect x="30%" y="60" rx="1" ry="1" width="250" height="10" />
+          </ContentLoader>
+        )}
         <button onClick={logout}>Sair</button>
       </div>
       <Menu />
