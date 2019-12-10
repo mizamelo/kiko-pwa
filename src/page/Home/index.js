@@ -14,7 +14,7 @@ import Menu from '../../components/Menu';
 import './styles.scss';
 
 function Home(props) {
-  const [taxa, setTaxa] = useState([]);
+  // const [taxa, setTaxa] = useState([]);
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [lastCourse, setLastCourse] = useState([]);
@@ -100,12 +100,12 @@ function Home(props) {
             {!!lastCourse.length ? (
               <ul>
                 {lastCourse.map((course, i) => (
-                  <button key={course.id} onClick={() => handleCourse(course, course.cor)}>
-                    <li style={{ background: course.cor }}>
+                  <li style={{ background: course.cor }}>
+                    <button style={{ background: 'transparent', height: '100%', width: '90%' }} key={course.id} onClick={() => handleCourse(course, course.cor)}>
                       <h5>{course.title}</h5>
                       <p>{formatData(course.date_access)}</p>
+                    </button>
                     </li>
-                  </button>
                 ))}
               </ul>
             ) : (
@@ -118,16 +118,16 @@ function Home(props) {
             {!!courses.length ? (
             <ul>
               {courses.map((course, i) => (
-                <button key={course.id} onClick={() => handleCourse(course, (i%2 ? '#5DA1F0' : '#F6C543'))}>
-                  <li style={{ background: (i%2 ? `linear-gradient(#5da1f0e8, #5da1f0de), url(${course.image}) cover` : `linear-gradient(#f6c543f2, #f6c543e3), url(${course.image})`) }}>
+                <li style={{ background: (i%2 ? `linear-gradient(#5da1f0e8, #5da1f0de), url(${course.image}) cover` : `linear-gradient(#f6c543f2, #f6c543e3), url(${course.image})`) }}>
+                  <button style={{ background: 'transparent', width: '90%' }} key={course.id} onClick={() => handleCourse(course, (i%2 ? '#5DA1F0' : '#F6C543'))}>
                     <h5>{course.title}</h5>
                     <p>{course.description}</p>
                     <span>
                       <img src={completed} alt="Completed"/>
                       100%
                     </span>
+                    </button>
                   </li>
-                </button>
               ))}
             </ul>
             ) : (

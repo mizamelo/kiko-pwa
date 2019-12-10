@@ -117,12 +117,12 @@ export default function Courses(props) {
           {!!courses.length ? (
             <ul className="list-courses">
               {courses.map((course, i) => (
-                <button key={course.id} onClick={() => handleCourse(course, (i%2 ? '#5DA1F0' : '#F6C543'))}>
                 <li style={{ background: (i%2 ? `linear-gradient(#5da1f0e8, #5da1f0de), url(${course.image}) cover` : `linear-gradient(#f6c543f2, #f6c543e3), url(${course.image})`) }}>
+                  <button style={{ background: 'transparent', height: '100%', width: '90%' }} key={course.id} onClick={() => handleCourse(course, (i%2 ? '#5DA1F0' : '#F6C543'))}>
                   <h5>{course.title}</h5>
                   <p>{course.description}</p>
+                  </button>
                 </li>
-                </button>
               ))}
             </ul>
           ): (

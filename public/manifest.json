@@ -18,8 +18,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://kiko-be234.firebaseapp.com",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
+

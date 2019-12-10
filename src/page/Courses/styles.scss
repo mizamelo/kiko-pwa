@@ -20,9 +20,12 @@
     display: flex;
     flex-direction: column;
     height: 600px;
+    -webkit-appearance: none;
   
     li {
+      -webkit-appearance: none;
       min-height: 129px;
+      color: #2E5077;
       border-radius: 5px;
       padding: 11px;
       margin-bottom: 20px;

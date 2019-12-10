@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import back from '../../assets/back.svg';
 import './styles.scss';
+import Menu from '../../components/Menu';
 
 export default function Details(props) {
   const { history: { location } } = props;
@@ -35,7 +36,7 @@ export default function Details(props) {
         <p className="body_p">{course.body}</p>
         <button>Proximo</button>
       </div>
-
+      <Menu />
     </div>
   );
 }

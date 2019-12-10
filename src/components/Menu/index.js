@@ -10,7 +10,7 @@ import './styles.scss';
 export default function Menu() {
   return (
     <div className="menu-container">
-      <ul>
+      <ul className="menu-list">
         <li>
           <Link to="/">
             <img height="30" src={Home} alt="Home"/>
