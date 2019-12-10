@@ -21,10 +21,10 @@ function Home(props) {
 
   useEffect(() => {
     async function getTax() {
-      const { data: { data } } = await api.get('/taxas');
+      // const { data: { data } } = await api.get('/taxas');
       const { data: { data: courses } } = await api.get('/courses');
 
-      setTaxa(data.results);
+      // setTaxa(data.results);
       setCourses(courses);
       setLoading(false);
     }
@@ -88,7 +88,7 @@ function Home(props) {
         <>
           <div className="taxa">
             <p>Taxa Selic</p>
-            <h1>{taxa[0] && taxa[0].selic}</h1>
+            <h1>4,90</h1>
           </div>
 
           <div className="notice">

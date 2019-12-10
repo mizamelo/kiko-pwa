@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kiko",
+  "name": "Conhecendo o Tesouro Direto",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,7 +18,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://kiko-be234.firebaseapp.com",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
