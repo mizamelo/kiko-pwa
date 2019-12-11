@@ -1,8 +1,16 @@
 .login-position {
-    top: 35vh;
+    top: 7vh;
     position: relative;
     display: flex;
     flex-direction: column;
+}
+
+.logo-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
 }
 
 .complementar-text-container {

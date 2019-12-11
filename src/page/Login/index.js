@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Img from 'react-image'
 
+import logo from '../../assets/logo-light.png';
 import api from '../../services/api';
 import Input from '../../components/components/InputComponent';
 import './styles.scss';
@@ -20,6 +22,9 @@ export default function Login(props) {
 
   return (
     <div className="container">
+      <div className="logo-login" >
+        <Img height="170" width="170" src={logo} />
+      </div>
       <div className="login-position">
         <form onSubmit={doLogin} method="POST">
           <Input type="email" required name="email" onChange={doLogin} title="E-mail"/>
