@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ContentLoader from 'react-content-loader';
+import Img from 'react-image'
 
 import api from '../../services/api';
 import profile from '../../assets/profile-i.svg';
@@ -39,8 +40,7 @@ export default function Profile(props) {
   return (
     <>
       <div className="profile">
-        {console.log(!!user.email)}
-        <img src={profile} alt="Profile"/>
+        <Img src={profile} alt="Profile"/>
         {!loading ? (
           <>
             <p>{!!user.name && user.name}</p>

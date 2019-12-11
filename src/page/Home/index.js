@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import ContentLoader from 'react-content-loader';
+import Img from 'react-image';
 import { 
   parseISO,
   formatDistance,
 } from 'date-fns';
+import { toast } from 'react-toastify';
 
 import pt from 'date-fns/locale/pt';
 
@@ -14,6 +16,7 @@ import Menu from '../../components/Menu';
 import './styles.scss';
 
 function Home(props) {
+  !navigator.onLine && toast.warn('Você está offline')
   // const [taxa, setTaxa] = useState([]);
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -127,12 +130,12 @@ function Home(props) {
               {!!courses.length ? (
               <ul>
                 {courses.map((course, i) => (
-                  <li  key={course.id}  style={{ background: (i%2 ? `linear-gradient(#5da1f0e8, #5da1f0de), url(${course.image}) cover` : `linear-gradient(#f6c543f2, #f6c543e3), url(${course.image})`) }}>
+                  <li  key={course.id}  style={{ background: (i%2 ? `linear-gradient(#5da1f0e8, #5da1f0de), url(${course.image})` : `linear-gradient(#f6c543f2, #f6c543e3), url(${course.image})`) }}>
                     <button style={{ background: 'transparent', width: '90%' }} onClick={() => handleCourse(course, (i%2 ? '#5DA1F0' : '#F6C543'))}>
                       <h5>{course.title}</h5>
                       <p>{course.description}</p>
                       <span>
-                        <img src={completed} alt="Completed"/>
+                        <Img src={completed} alt="Completed"/>
                         100%
                       </span>
                       </button>

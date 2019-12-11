@@ -8240,7 +8240,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8426,6 +8426,11 @@ react-content-loader@^4.3.3:
   resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-4.3.3.tgz#01e8fff1b6a9f6b4eeb2113b1c168f845c58806d"
   integrity sha512-9DdPa6rt013sO5Z2TBnRLExSBVPMwcFP9nxFKQXyQHo71/xR4nfiQqQvFFI92XQlahILYZPr+S/W5hWuRmbYjg==
 
+react-detect-offline@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-detect-offline/-/react-detect-offline-2.4.0.tgz#e40f5a588ffb0680bcbcfa33e4d9d39ad805c3ff"
+  integrity sha512-OHglQ8bpbM4x8m23RhRCm1e1cYtuCoLQ7NKHsC0zzm1z2vQIrNTq7MvhZTQ7TsbgK1XapMewLxGW9QEW3DXC9A==
+
 react-dev-utils@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-9.1.0.tgz#3ad2bb8848a32319d760d0a84c56c14bdaae5e81"
@@ -8479,6 +8484,13 @@ react-google-login@^5.0.7:
   dependencies:
     "@types/react" "*"
     prop-types "^15.6.0"
+
+react-image@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-image/-/react-image-2.2.1.tgz#2aa7832be93023e918adae66b0d1b37d06eed293"
+  integrity sha512-fUlwjOmEQU8JBe5jsTnFiLbZy0IyiYx6sOUVMlz9os2+rZexiOJoC0WV4vycvnEgFVxsSYnS8YIhEi+X/NqP8g==
+  dependencies:
+    prop-types "15.7.2"
 
 react-is@^16.6.0, react-is@^16.7.0:
   version "16.11.0"
