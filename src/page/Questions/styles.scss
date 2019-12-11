@@ -1,0 +1,35 @@
+.react-quiz-container {
+  width: unset !important;
+
+  .nextQuestionBtn {
+    background: #fff !important;
+    color: #333 !important;
+  }
+
+  .questionWrapperBody {
+    h3 {
+      font-size: 14px;
+      margin-bottom: 14px;
+      margin-top: 10px;
+    }
+  }
+
+  .quiz-result-filter select {
+    padding: 2px !important;
+  }
+
+  .card-body {
+    > h2 {
+      font-size: 16px !important;
+    }
+
+    h2:last-of-type {
+      font-size: 13px !important;
+      font-weight: 100 !important;
+    }
+  }
+
+  .result-answer-wrapper {
+    font-size: 12px !important;
+  }
+}

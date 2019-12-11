@@ -27,6 +27,10 @@ export default function Details(props) {
     getCourse()
   }, [props.match]);
 
+  function toQuestions() {
+    props.history.push(`/${course.id}/questions`)
+  }
+
   return (
     <div className="details">
       <div className="header" style={{ background: location.cor || '#F6C543' }}>
@@ -72,7 +76,7 @@ export default function Details(props) {
             <rect x="98" y="63" rx="0" ry="0" width="0" height="0" /> 
            </ContentLoader>
         )}
-        <button>Proximo</button>
+        <button onClick={toQuestions}>Proximo</button>
       </div>
       <Menu />
     </div>
