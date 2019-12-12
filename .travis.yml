@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "node"
+  - "stable"
 cache:
   directories:
     - node_modules
@@ -8,7 +8,9 @@ script:
   - yarn build
 deploy:
   provider: firebase
+  skip_cleanup: true
   token:
-    secure: "1//0h5-ER9Jf9rtdCgYIARAAGBESNwF-L9IrnlvfYBhujAIkyIyi7B9A_bG4G6bsrQZJrwpSbvxPNrcQ2Paba20LMR9eVLB9lHPgIWM"
-on:
-  branch: master
+    secure: $FIREBASE_TOKEN
+  local_dir: build
+  on:
+    branch: master
