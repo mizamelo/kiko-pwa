@@ -9,6 +9,6 @@ script:
 deploy:
   provider: firebase
   token:
-    secure: "1//0hkJZ9Po6x0RKCgYIARAAGBESNwF-L9Irr1a-L40srMMZ0ZbwvJcvPjzO2pYsL2yg8SW8FUsRUW0KIxrhyKwpnImmA3OzS6nasEc"
+    secure: "1//0h5-ER9Jf9rtdCgYIARAAGBESNwF-L9IrnlvfYBhujAIkyIyi7B9A_bG4G6bsrQZJrwpSbvxPNrcQ2Paba20LMR9eVLB9lHPgIWM"
 on:
   branch: master
