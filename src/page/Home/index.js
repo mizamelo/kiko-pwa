@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import ContentLoader from 'react-content-loader';
-import Img from 'react-image';
+// import Img from 'react-image';
 import { 
   parseISO,
   formatDistance,
@@ -135,7 +135,7 @@ function Home(props) {
                       <h5>{course.title}</h5>
                       <p>{course.description}</p>
                       <span>
-                        <Img src={completed} alt="Completed"/>
+                        <img src={completed} alt="Completed"/>
                         100%
                       </span>
                       </button>

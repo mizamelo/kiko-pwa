@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Img from 'react-image'
 
+import logo from '../../assets/logo-light.png';
 import api from '../../services/api';
 import Input from '../../components/components/InputComponent';
 import './styles.scss';
@@ -30,6 +32,9 @@ export default function Register(props) {
 
   return (
     <div className="container">
+      <div className="logo-login" >
+        <Img height="170" width="170" src={logo} />
+      </div>
       <div className="register-position">
         <form onSubmit={handleRegister} method="POST">
           <Input type="text" required name="name" title={"Nome"}/>

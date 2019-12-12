@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ContentLoader from 'react-content-loader';
-import Img from 'react-image'
+// import Img from 'react-image'
 
 // import api from '../../services/api';
 import back from '../../assets/back.svg';
@@ -35,7 +35,7 @@ export default function Details(props) {
     <div className="details">
       <div className="header" style={{ background: location.cor || '#F6C543' }}>
         <Link to="/courses">
-          <Img src={back} alt="Voltar"/>
+          <img src={back} alt="Voltar"/>
         </Link>
         <div className="title">
           {!loading ? (
