@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "node"
+cache:
+  directories:
+    - node_modules
+script:
+  - 
+deploy:
+  provider: firebase
+  token:
+    secure: "1//0hkJZ9Po6x0RKCgYIARAAGBESNwF-L9Irr1a-L40srMMZ0ZbwvJcvPjzO2pYsL2yg8SW8FUsRUW0KIxrhyKwpnImmA3OzS6nasEc"
+on:
+  branch: master
