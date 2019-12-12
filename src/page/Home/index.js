@@ -100,7 +100,7 @@ function Home(props) {
           <>
             <div className="taxa">
               <p>Taxa Selic</p>
-              <h1>4,90</h1>
+              <h1>4,50</h1>
             </div>
 
             <div className="notice">
